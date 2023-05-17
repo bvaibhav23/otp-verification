@@ -10,6 +10,7 @@ const From = () => {
     const { city, fullName, panNumber, email, phoneNumber, otp } = input;
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(10);
+    const time = 10;//sec
 
     const [error, setError] = useState({ city: false, fullName: false, panNumber: false, email: false, phoneNumber: false, otp: false });
     const pattern = { city: /[a-zA-z]{3,20}/, fullName: /[A-Za-z\s]{5,140}/, panNumber: /[A-Z]{5}[0-9]{4}[A-Z]{1}/, email: /[a-z0-9.]{3,}[@]{1}[a-z]{3,5}[.]{1}[a-z]{2,3}/, phoneNumber: /[0-9]{10}/, otp: /[0-9]{4}/ };
@@ -37,7 +38,7 @@ const From = () => {
         alert(`Your OTP is ${otp}`);
         setTimeout(() => {
             setDisableOTPBtn(false)
-        }, 10000);
+        }, time * 1000);
     }
     const resendOTP = () => {
         if (count <= 3) {
@@ -45,7 +46,7 @@ const From = () => {
             setCount(count => count + 1);
             generateOTP();
             setMinutes(0);
-            setSeconds(10);
+            setSeconds(time);
             console.log(count);
         }
         else {
