@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25rem;
+  margin: 3rem auto;
+  border-radius: 2rem;
+  background-color: bisque;
+  background: linear-gradient(45deg, rgb(159, 159, 234), rgb(132, 132, 233));
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 0 rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 20rem;
+  margin: auto;
+
+  /* border: 1px dashed black; */
+}
+.header {
+  margin-bottom: 0px;
+}
+input {
+  width: 18rem;
+  height: 2rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  /* background-color: lightpink; */
+}
+.errorMessage {
+  width: 18rem;
+  color: red;
+  text-align: right;
+}
+label {
+  padding: 0.2rem;
+  opacity: 0.9;
+  width: 10rem;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  text-align: center;
+  /* width: 5rem; */
+  margin: auto;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 7px;
+  background-color: floralwhite;
+  padding: 0.5rem;
+}
+button:focus {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+/* input:valid {
+  background-color: palegreen;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:invalid {
+  background-color: lightpink;
+} */
+.inputField {
+  display: flex;
+  align-items: center;
+  width: 18rem;
+  height: 2rem;
+  padding: 0.2rem;
+  margin: 0.2rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+.prefix {
+  font-size: small;
+  margin: 0px;
+
+  padding: 0px;
+  opacity: 0.7;
+}
+.resend {
+  display: flex;
+  padding-left: 1rem;
 }
